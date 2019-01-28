@@ -5,6 +5,7 @@
 ; and the definition of the Fibonacci numbers to prove that Fib(n) = (φⁿ - ψⁿ)/√5.
 ; Let's first consider our base case:
 ; Fib(0) = (φ⁰ - ψ⁰)/√5 = (1 - 1)/√5 = 0/√5 = 0
+; Fib(1) = (φ¹ - ψ¹)/√5 = (φ - ψ)/√5 = ((1 + √5) - (1 - √5))/(2√5) = (2√5)/(2√5) = 1.
 ; As expected we get that F(0) = 0.
 ; We'll now consider our step case:
 ; Assuming that Fib(k) holds for natural k less than n + 1, with n ≥ 0,
