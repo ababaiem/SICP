@@ -4,8 +4,11 @@
 ; In order to do so, we let ψ = (1 - √5)/2, and also use induction 
 ; and the definition of the Fibonacci numbers to prove that Fib(n) = (φⁿ - ψⁿ)/√5.
 ; Let's first consider our base case:
+; Fib(2) = Fib(1) + Fib(0)
 ; Fib(0) = (φ⁰ - ψ⁰)/√5 = (1 - 1)/√5 = 0/√5 = 0
-; Fib(1) = (φ¹ - ψ¹)/√5 = (φ - ψ)/√5 = ((1 + √5) - (1 - √5))/(2√5) = (2√5)/(2√5) = 1.
+; Fib(1) = (φ¹ - ψ¹)/√5 = (φ - ψ)/√5 = ((1 + √5) - (1 - √5))/(2√5) = (2√5)/(2√5) = 1
+; Fib(2) = (φ² - ψ²)/√5 = ((φ - ψ)(φ + ψ))/√5 = ((φ - ψ)/√5)(φ + ψ) = (Fib(1))(φ + ψ)
+;        = (1)(φ + ψ) = (φ + ψ) = (1 + √5) + (1 - √5) = 1 + 1 = 2.
 ; As expected we get that F(0) = 0.
 ; We'll now consider our step case:
 ; Assuming that Fib(k) holds for natural k less than n + 1, with n ≥ 0,
@@ -26,4 +29,13 @@
 ; We thereby have showed that Fib(n + 1) holds.
 ; Since both the base case and the step case have been performed,
 ; by mathematical induction the statement Fib(k) holds for all natural number k.
+; It now remains for us to prove that Fib(n) is closest integer to φⁿ/√5.
+; It signifies that the difference between Fib(n) and φⁿ/√5 should be smaller than ½.
+; Fib(n) - φⁿ/√5 = ψⁿ/√5 < 1/2
+; ψⁿ/√5 = (1 - √5)ⁿ/√5 = (1 - √5)(1 - √5)⁽ⁿ⁻¹⁾/√5 = ((1/√5) - 1)(1 - √5)⁽ⁿ⁻¹⁾
+; Since √5 > 1, then 1/√5 < 1, it means that the second factor will always be positive,
+; no matter the n, and that the first factor will give us a negative number.
+; A positive number multiplied by a negative numbers will results in a negative number.
+; ψⁿ/√5 < 0 < 1/2 or ψⁿ < √5/2
+; Therefore, Fib(n) is the closest integer to φⁿ/√5.
 ; Q.E.D.
