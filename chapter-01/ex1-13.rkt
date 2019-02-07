@@ -8,8 +8,8 @@
 ; Fib(0) = (φ⁰ - ψ⁰)/√5 = (1 - 1)/√5 = 0/√5 = 0
 ; Fib(1) = (φ¹ - ψ¹)/√5 = (φ - ψ)/√5 = ((1 + √5) - (1 - √5))/(2√5) = (2√5)/(2√5) = 1
 ; Fib(2) = (φ² - ψ²)/√5 = ((φ - ψ)(φ + ψ))/√5 = ((φ - ψ)/√5)(φ + ψ) = (Fib(1))(φ + ψ)
-;        = (1)(φ + ψ) = (φ + ψ) = (1 + √5) + (1 - √5) = 1 + 1 = 2.
-; As expected we get that F(0) = 0.
+;        = (1)(φ + ψ) = (φ + ψ) = ((1 + √5) + (1 - √5))/2 = (1 + 1)/2 = 2/2 = 1.
+; As expected we get that F(2) = 1 + 0 = 1.
 ; We'll now consider our step case:
 ; Assuming that Fib(k) holds for natural k less than n + 1, with n ≥ 0,
 ; let us prove then that Fib(n + 1) = (φ⁽ⁿ⁺¹⁾ - ψ⁽ⁿ⁺¹⁾)/√5.
